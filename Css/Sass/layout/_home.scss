@@ -1,0 +1,319 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*Start header*/
+
+header {
+  -webkit-background-image:url(../img/1920x1080/bg.jpg);
+  -moz-background-image:url(../img/1920x1080/bg.jpg);
+  -o-background-image:url(../img/1920x1080/bg.jpg);
+  background-image:url(../img/1920x1080/bg.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  .overlay 
+  {@include overlay; background:rgba(0,0,0,0.6);}
+  
+  .intro {
+    position: relative;
+    padding-top:350px;
+    color:#FFF;
+
+    h1 
+    {font-size:60px;}
+    p 
+    {font-size:16px; width:45%;}
+    button {
+      font-size:20px;
+      color:#FFF;
+      border:2px solid #FFF;
+      padding:5px 40px;
+      &:hover 
+      {@include hoverBtn;}
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  header .intro {
+    padding-top:300px;
+    h1 
+    {font-size:30px;}
+    p 
+    {width:100%;}
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1900px) {
+  header .intro {
+    padding-top:280px;
+    h1 
+    {font-size:33px;}
+    p 
+    {width:50%;}
+  }
+}
+/*End header*/
+/*Start about*/
+.about {
+  padding: 70px 0;
+  h2 
+  {@include subheader;}
+
+  p 
+  {color: $paragraphColor; font-size: 15px; margin-bottom: 30px;}
+
+  img 
+  {width: 100%;}
+}
+/*End about*/
+
+/*Start why us*/
+.why-us {
+  padding: 70px 0;
+  background-color: $section_bg;
+  .info {
+    h2 
+    {@include subheader;}
+    p {
+      color: $paragraphColor;
+      font-size: 15px;
+      width: 80%;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    button {
+      background: #515769;
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      padding: 5px 35px;
+      &:hover 
+      {@include hoverBtn;}
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .info {
+      text-align: center;
+      p 
+      {width: 100%;}
+    }
+  }
+  .accordion {
+    .card {
+      margin-top: 20px;
+      .card-header {
+        background: #fff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        outline: none;
+        button {
+          font-size: 20px;
+          color: $subHeader;
+          font-weight: 700;
+          margin: 15px 0;
+          text-decoration: none;
+          &:hover 
+          {color: #999caa;}
+        }
+      }
+    }
+    .card-body {
+      color: $paragraphColor;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+  }
+}
+/*End why us*/
+
+/*Start products*/
+.products {
+  padding: 70px 0;
+  h2 
+  {@include subheader;}
+
+  p 
+  {color: $paragraphColor; font-size: 15px;}
+
+  .project {
+    margin-top: 20px;
+    img 
+    {width: 100%;}
+
+    h4 {
+      color: $subHeader;
+      padding: 17px 0 7px;
+      font-weight: bold;
+      font-size: 23px;
+      display: inline-block;
+    }
+    span 
+    {font-size: 13px; margin-left: 20px; color: $paragraphColor;}
+
+    h6 
+    {color: $subHeader;}
+  }
+}
+/*End products*/
+
+/*Start pricing*/
+.price {
+  background: $section_bg;
+  padding: 70px 0;
+  .pricing {
+    background: #fff;
+    -webkit-box-shadow: 10px 10px 12px #ccc;
+    -moz-box-shadow: 10px 10px 12px #ccc;
+    -o-box-shadow: 10px 10px 12px #ccc;
+    box-shadow: 10px 10px 12px #ccc;
+    min-height: 400px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    h3 {
+      padding-top: 55px;
+      color: $subHeader;
+      font-weight: 600;
+      font-size: 25px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      color: $brandColor;
+      padding-top: 10px;
+    }
+    ul {
+      li 
+      {line-height: 2.2; color: $paragraphColor;}
+    }
+    @import "../Components/Buttons";
+  }
+
+}
+/*End pricing*/
+
+/*Start portfolio*/
+.portfolio {
+  padding: 70px 0;
+  h2 
+  {@include subheader;}
+  p 
+  {color: $paragraphColor; font-size: 15px; width: 50%;}
+
+  img 
+  {width: 100%; margin: 30px 0 0px;}
+}
+
+@media (max-width: 575.98px) {
+  .portfolio {
+    text-align: center;
+    p 
+    {width: 100%;}
+  }
+}
+/*End portfolio*/
+
+/*Start clients section*/
+.clients {
+  padding: 40px 0;
+  img {
+    width: 100%;
+    margin: 5px 0;
+    &:hover 
+    {opacity: 0.5;}
+  }
+}
+@media (max-width: 575.98px) {
+  .clients {
+    display: inline-block;
+    text-align: center;
+    img 
+    {width: 40%;}
+  }
+}
+/*End clients section*/
+
+/*Start Services*/
+.services {
+  padding: 70px 0;
+  background: $section_bg;
+  h2 
+  {@include subheader;}
+  p {
+    color: $paragraphColor;
+    font-size: 15px;
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .service {
+    background: #fff;
+    padding: 40px 30px 5px 40px;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 12px #ccc;
+    -moz-box-shadow: 10px 10px 12px #ccc;
+    -o-box-shadow: 10px 10px 12px #ccc;
+    box-shadow: 10px 10px 10px #ccc;
+    margin-bottom: 30px;
+    &:hover {
+      color: #fff;
+      -webkit-background: linear-gradient(#2196f3, #006699);
+      -moz-background: linear-gradient(#2196f3, #006699);
+      -o-background: linear-gradient(#2196f3, #006699);
+      background: linear-gradient(#2196f3, #006699);
+      cursor: pointer;
+    }
+    &:hover i,
+    &:hover p 
+    {color: #fff;}
+
+    i 
+    {color: #999caa; font-size: 40px;}
+
+    h4 
+    {margin: 18px 0; font-size: 22px;}
+    p 
+    {width: 100%; font-weight: 500; line-height: 1.7;}
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services {
+    .info {
+      text-align: center;
+      p 
+      {width: 100%;}
+    }
+  }
+}
+/*End Services*/
+
+/*Start scroll top btn*/
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  display: none;
+  &:hover {
+    background: $brandColor;
+    color: #fff;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+  }
+}
+/*End scroll top btn*/
